@@ -13,13 +13,35 @@ console.log(word.length);
 const fruit = "Banaan";
 const vegetable = "Aardappel";
 
-
+if (fruit.length > vegetable.length) {
+    console.log("true")
+}else {
+    console.log("flase")
+}
 
 /* Opdracht 2 */
 //  Zorg ervoor dat de laatste letter van het woord in fruit en vegetable (hierboven) in de terminal gelogd wordt.
 //  Tip: bedenk 1 manier die voor beide woorden zou werken.
 // ---- Verwachte uitkomst voor fruit: "n"
 // ---- Verwachte uitkomst voor vegetable: "l"
+
+const lLetterFruit = fruit.length;
+const lLetterVegetable = vegetable.length;
+console.log(lLetterFruit);
+console.log(lLetterVegetable);
+
+console.log(fruit.charAt(lLetterFruit - 1));
+console.log(vegetable.charAt(lLetterVegetable - 1));
+
+const lastLetter = fruit.charAt(fruit.length - 1);
+console.log(lastLetter);
+
+function getLastLetter (name) {
+    const letter = name.charAt(name.length -1);
+    return letter
+}
+
+console.log(getLastLetter(vegetable));
 
 
 
@@ -28,6 +50,7 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst: "De kat krabt de krullen van de trap"
 
 const userInput = "  De kat krabt de krullen van de trap ";
+console.log(userInput.trim())
 
 
 
@@ -36,13 +59,18 @@ const userInput = "  De kat krabt de krullen van de trap ";
 // ---- Verwachte uitkomst: true
 
 const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
+console.log(story.includes("Fantastisch"))
 
 
 
 /* Opdracht 5 */
 // Knip de vraag van bovenstaande tekst (story) af, zodat alleen het eerste gedeelte overblijft en log dit in de terminal.
 // ---- Verwachte uitkomst: "We vinden de behaalde resultaten werkelijk prachtig."
+const cut = story.indexOf("F");
+console.log(cut);
 
+const sentence = story.substring(0, cut - 1);
+console.log(sentence);
 
 
 /* Opdracht 6 */
@@ -53,6 +81,9 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 // ---- Verwachte uitkomst: "€35,59"
 
 const price = "$35.59";
+
+const newSentence = "€" + price.substring(1,price.indexOf(".")) + "," + price.substring(4,price.length);
+console.log(newSentence);
 
 
 
